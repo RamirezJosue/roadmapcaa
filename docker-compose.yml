@@ -14,7 +14,6 @@ services:
     depends_on:
       - php
 
-
   # PHP Service
   php:
     build: ./.docker/php
@@ -25,7 +24,7 @@ services:
       mysql:
         condition: service_healthy
 
-   # MySQL Service
+  # MySQL Service
   mysql:
     image: mysql:8
     environment:
@@ -41,4 +40,5 @@ services:
 
 # Volumes
 volumes:
+
   mysqldata:

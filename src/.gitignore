@@ -1,0 +1,13 @@
+# ignore ALL .log files
+*.log
+/academy
+/app
+/DashRoadMap
+/doc_delivery
+/honduras
+/includes/ini.php
+/moodledata
+/oldroadmap
+/prueva_git
+/prueva_ignore
+/bd/banco.php

@@ -16,7 +16,7 @@ services:
 
   # PHP Service
   php:
-    build: .
+    build: ./.docker/php
     working_dir: /var/www/php
     volumes:
       - ./src:/var/www/php
@@ -26,6 +26,7 @@ services:
   # MySQL Service
   mysql:
     image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: demo

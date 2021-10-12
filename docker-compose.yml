@@ -21,8 +21,7 @@ services:
     volumes:
       - ./src:/var/www/php
     links:
-      mysql:
-        condition: service_healthy
+      - mysql
 
   # MySQL Service
   mysql:

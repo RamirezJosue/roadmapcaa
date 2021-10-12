@@ -16,7 +16,7 @@ services:
 
   # PHP Service
   php:
-    build: ./.docker/php
+    build: .
     working_dir: /var/www/php
     volumes:
       - ./src:/var/www/php

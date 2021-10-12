@@ -11,7 +11,7 @@ services:
     volumes:
       - ./src:/var/www/php
       - ./.docker/nginx/conf.d:/etc/nginx/conf.d
-    depends_on:
+    links:
       - php
 
   # PHP Service
@@ -20,7 +20,7 @@ services:
     working_dir: /var/www/php
     volumes:
       - ./src:/var/www/php
-    depends_on:
+    links:
       mysql:
         condition: service_healthy
 
